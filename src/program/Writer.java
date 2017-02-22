@@ -107,7 +107,12 @@ public class Writer {
 	 * Method to get the task1 done and saved into a file
 	 */
 	public void task1() {
+		//First, we retrieve all the journeys made this year
+		//and store them into an array
 		ArrayList<Journey> journeys = this.year.get_Journeys();
+		
+		//We order them by their cost
+		//Could be simplified using Comparable Interface on Journey and calling sort method?
 		for(int i=0; i<journeys.size(); i++) {
 			Journey max = journeys.get(i);
 			int index_max=0;
@@ -124,32 +129,42 @@ public class Writer {
 			}
 		}
 		
+		//We create a buffer to write onto the file
 		BufferedWriter writer = null;
+		//We try to write
 		try {
+			//Opens the file
 		    writer = new BufferedWriter(new OutputStreamWriter(
 		          new FileOutputStream(this.task1_file), "utf-8"));
+		    //Some text to fancy better the results
 		    writer.write("CHARGES FOR THE TOP 5 JOURNEYS\n\r");
+		    //Then we print the 5 most expensive journeys
 		    for(int i=0; i<5; i++) {
 		    	writer.write(journeys.get(i).get_Driver().get_Registration_Number()+"  "+
 		    					journeys.get(i).get_Place().get_Adress()+"     "+
 		    						journeys.get(i).get_Place().get_Distance()+" miles  "+
 		    							journeys.get(i).get_Passengers()+" person(s)  "+
-		    								"Cost : £"+journeys.get(i).get_Cost()+"\n");
+		    								"Cost :£"+journeys.get(i).get_Cost()+"\n");
 		    }
+		  //Some text to fancy better the results
+		  //Then we print the 5 cheapest journeys
 		    writer.write("\nCHARGES FOR THE CHEAPEST 5 JOURNEYS\n");
 		    for(int i=journeys.size()-1; i>journeys.size()-6; i--) {
 		    	writer.write(journeys.get(i).get_Driver().get_Registration_Number()+"  "+
 		    					journeys.get(i).get_Place().get_Adress()+"     "+
 		    						journeys.get(i).get_Place().get_Distance()+" miles  "+
 		    							journeys.get(i).get_Passengers()+" person(s)  "+
-		    								"Cost : £"+journeys.get(i).get_Cost()+"\n");
+		    								"Cost :£"+journeys.get(i).get_Cost()+"\n");
 		    }
 		    writer.close();
 		} 
+		//To catch the IOException, in case there is a problem with the file opening
 		catch (IOException ex) {
+			//We print what the error is
 			ex.printStackTrace();
 			System.exit(1); 
 		}
+		//Print information message to confirm good execution of task 1
 		System.out.println("Task 1 printed in: "+this.task1_file);
 	}
 	
@@ -205,23 +220,32 @@ public class Writer {
 			}
 		}
 		
+		//Creates a buffer to write onto the file
 		BufferedWriter writer = null;
 		try {
+			//We open the file
 		    writer = new BufferedWriter(new OutputStreamWriter(
 		          new FileOutputStream(this.task2_file), "utf-8"));
+		    //For all the taxies
 		    for(i=0; i<taxies.size(); i++) {
+		    	//We write their name
 		    	writer.write(taxies.get(i).get_Name()+"\n");
+		    	//And the places they visited
 		    	for(String s : dest_per_name.get(i)) {
 		    		writer.write("   "+s+"\n");
 		    	}
 		    	writer.write("\n");
 		    }
+		    //We close the file
 		    writer.close();
 		} 
+		//To catch the IOException, in case there is a problem with the file opening
 		catch (IOException ex) {
+			//We print what the error is
 			ex.printStackTrace();
 			System.exit(1); 
 		}
+		//Print information message to confirm good execution of task 2
 		System.out.println("Task 2 printed in: "+this.task2_file);
 	}
 	
@@ -229,33 +253,44 @@ public class Writer {
 	 * Method to get the task3 done and saved into a file
 	 */
 	public void task3() {
+		//We get all the journeys of the current year
 		ArrayList<Journey> journeys = this.year.get_Journeys();
-		
+		//And the destinations from the previous year
 		HashSet<String> previous = this.year.get_Previous_year_destinations();
+		//From the journeys of the current year we extract the destinations
 		HashSet<String> current = new HashSet<String>();
 		for(Journey j : journeys) {
 			if(!current.contains(j.get_Place().get_Adress())) {
 				current.add(j.get_Place().get_Adress());
 			}
 		}
+		
+		//We create the sets with the destinations in both sets, or either in one or the other
+		//So we get 3 new sets
 		HashSet<String> only_previous = this.keep_only_previous(previous, current);
 		HashSet<String> only_new = this.keep_new(previous, current);
 		HashSet<String> both = this.keep_both(previous, current);
 		
+		//We crate a buffer to write data onto the file
 		int year_nb = this.get_Year().get_Year_nb();
 		BufferedWriter writer = null;
 		try {
+			//We print all the places visited only this year
 		    writer = new BufferedWriter(new OutputStreamWriter(
 		          new FileOutputStream(this.task3_file), "utf-8"));
 		    writer.write(only_new.size()+" NEW PLACES IN "+year_nb+"\n");
 		    for(String s : only_new) {
 		    	writer.write(s+"\n");
 		    }
+		    
+		    //We print all the palces visited only last year
 		    writer.write("\n");
 		    writer.write(only_previous.size()+" PLACES VISITED IN "+(year_nb-1)+" ONLY\n");
 		    for(String s : only_previous) {
 		    	writer.write(s+"\n");
 		    }
+		    
+		    //We print all the places visited only in both years
 		    writer.write("\n");
 		    writer.write(both.size()+" PLACES VISITED IN BOTH "+(year_nb-1)+" AND "+year_nb+"\n");
 		    for(String s : both) {
@@ -264,15 +299,22 @@ public class Writer {
 		    writer.write("\n");
 		    writer.close();
 		} 
+		//To catch the IOException, in case there is a problem with the file opening
 		catch (IOException ex) {
+			//We print what the error is
 			ex.printStackTrace();
 			System.exit(1); 
 		}
+		//Print information message to confirm good execution of task 3
 		System.out.println("Task 3 printed in: "+this.task3_file);
 	}
 	
+	/**
+	 * Method to get the elements that are in the set previous but not in current
+	 */
 	public HashSet<String> keep_only_previous(HashSet<String> previous, HashSet<String> current) {
 		HashSet<String> result = new HashSet<String>();
+		//If element s of previous is not in current, we add it to the result. If yes, we go to the next element
 		for(String s : previous) {
 			if(!current.contains(s)) {
 				result.add(s);
@@ -281,8 +323,12 @@ public class Writer {
 		return result;
 	}
 	
+	/**
+	 * Method to get the elements that are in the set current but not in previous
+	 */
 	public HashSet<String> keep_new(HashSet<String> previous, HashSet<String> current) {
 		HashSet<String> result = new HashSet<String>();
+		//If element s of current is not in previous, we add it to the result. If yes, we go to the next element
 		for(String s : current) {
 			if(!previous.contains(s)) {
 				result.add(s);
@@ -291,13 +337,18 @@ public class Writer {
 		return result;
 	}
 	
+	/**
+	 * Method to get the intersection of two sets of strings
+	 */
 	public HashSet<String> keep_both(HashSet<String> previous, HashSet<String> current) {
 		HashSet<String> result = new HashSet<String>();
+		//If element s of previous is in current, we add it to the result. If not, we go to the next element
 		for(String s : previous) {
 			if(current.contains(s)) {
 				result.add(s);
 			}
 		}
+		//Returns the sets containing the intersection of the two parameters
 		return result;
 	}
 }
