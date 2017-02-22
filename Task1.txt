@@ -1,0 +1,13 @@
+CHARGES FOR THE TOP 5 JOURNEYS
+HW01 AAA  Glasgow     42.0 miles  4 person(s)  Cost :Â£73.5
+HW01 AAA  Dundee     37.0 miles  4 person(s)  Cost :Â£64.75
+HW04 AAA  Glasgow     42.0 miles  3 person(s)  Cost :Â£63.0
+HW04 AAA  St Andrews     31.0 miles  4 person(s)  Cost :Â£54.25
+HW03 AAA  St Andrews     31.0 miles  4 person(s)  Cost :Â£54.25
+
+CHARGES FOR THE CHEAPEST 5 JOURNEYS
+HW02 AAA  Falkirk     23.0 miles  1 person(s)  Cost :Â£23.0
+HW02 AAA  St Andrews     31.0 miles  1 person(s)  Cost :Â£31.0
+HW03 AAA  Stirling     31.0 miles  1 person(s)  Cost :Â£31.0
+HW04 AAA  Dundee     37.0 miles  1 person(s)  Cost :Â£37.0
+HW03 AAA  Stirling     31.0 miles  2 person(s)  Cost :Â£38.75

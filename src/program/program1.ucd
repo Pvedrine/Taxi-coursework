@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="program1" size="1236,1273" id="program" metadata="uml2-1.0" initialized="true" zoom="0.5" scrolledX="-37" scrolledY="-10" tag="10" key="32303037303533312D313020436F75727365776F726B4A617661">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1 //@children.5/@sourceConnections.1" name="Writer" location="224,480" size="310,319" id="program/Writer" runTimeClassModel="keep_new(Ljava.util.HashSet;Ljava.util.HashSet;),set_Task1_file(Ljava.lang.String;),get_Task1_file(),get_Task2_file(),get_Year(),get_Task3_file(),Writer(Lprogram.Year;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),set_Year(Lprogram.Year;),keep_both(Ljava.util.HashSet;Ljava.util.HashSet;),keep_only_previous(Ljava.util.HashSet;Ljava.util.HashSet;),task2(),task3(),set_Task3_file(Ljava.lang.String;),task1(),set_Task2_file(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="123,270">
+      <children xsi:type="editmodel:MethodEditModel" name="Writer" id="program/Writer#Writer(Lprogram.Year;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Task1_file" id="program/Writer#get_Task1_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Task2_file" id="program/Writer#get_Task2_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Task3_file" id="program/Writer#get_Task3_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Year" location="14,113" id="program/Writer#get_Year()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="keep_both" id="program/Writer#keep_both(Ljava.util.HashSet;Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="keep_new" id="program/Writer#keep_new(Ljava.util.HashSet;Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="keep_only_previous" id="program/Writer#keep_only_previous(Ljava.util.HashSet;Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Task1_file" id="program/Writer#set_Task1_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Task2_file" id="program/Writer#set_Task2_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Task3_file" id="program/Writer#set_Task3_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Year" id="program/Writer#set_Year(Lprogram.Year;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="task1" id="program/Writer#task1()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="task2" id="program/Writer#task2()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="task3" id="program/Writer#task3()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Writer->program/Destination" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,317" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Writer->program/Year*program/Writer-Soyatec::Import->program/Year" source="//@children.0" target="//@children.4" targetEnd="//@children.0/@sourceConnections.1/@children.2" label="//@children.0/@sourceConnections.1/@children.0" sourceEnd="//@children.0/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,19" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,263"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Writer->program/Journey*program/Writer-Soyatec::Import->program/Journey" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.2/@children.2" label="//@children.0/@sourceConnections.2/@children.0" sourceEnd="//@children.0/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,287" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,30"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Writer->program/Taxi" source="//@children.0" target="//@children.6" targetEnd="//@children.0/@sourceConnections.3/@children.2" label="//@children.0/@sourceConnections.3/@children.0" sourceEnd="//@children.0/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="184,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,193"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.4/@sourceConnections.3 //@children.3/@sourceConnections.2 //@children.0/@sourceConnections.2" name="Journey" location="1214,737" size="184,229" id="program/Journey" runTimeClassModel="get_Driver(),get_Passengers(),set_Driver(Lprogram.Taxi;),set_Place(Lprogram.Destination;),Journey(Lprogram.Taxi;Lprogram.Destination;I),set_Passengers(I),speak(),set_Cost(F),get_Cost(),get_Place()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,180">
+      <children xsi:type="editmodel:MethodEditModel" name="Journey" id="program/Journey#Journey(Lprogram.Taxi;Lprogram.Destination;I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Cost" id="program/Journey#get_Cost()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Driver" id="program/Journey#get_Driver()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Passengers" id="program/Journey#get_Passengers()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Place" id="program/Journey#get_Place()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Cost" id="program/Journey#set_Cost(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Driver" id="program/Journey#set_Driver(Lprogram.Taxi;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Passengers" id="program/Journey#set_Passengers(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Place" id="program/Journey#set_Place(Lprogram.Destination;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="speak" id="program/Journey#speak()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Taxi@driver+program/Journey@" source="//@children.1" target="//@children.6" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0" id="program/Taxi@driver+program/Journey@|program/Journey#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="driver" location="248,183" id="program/Taxi@driver+program/Journey@|program/Taxi#driver" multiplicityLabel="//@children.1/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.1/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - driver" location="539,267" size="36,12" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="539,293" size="6,12" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Journey@journeys+program/Year@" source="//@children.1" target="//@children.4" targetEnd="//@children.1/@sourceConnections.1/@children.2" label="//@children.1/@sourceConnections.1/@children.0" sourceEnd="//@children.1/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="journeys" location="78,0" id="program/Journey@journeys+program/Year@|program/Journey#journeys" attachSource="true" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - journeys" location="1299,717" size="49,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="1281,717" size="4,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="261,283" id="program/Journey@journeys+program/Year@|program/Year#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Journey->program/Taxi*program/Journey-Soyatec::Import->program/Taxi" source="//@children.1" target="//@children.6" targetEnd="//@children.1/@sourceConnections.2/@children.2" label="//@children.1/@sourceConnections.2/@children.0" sourceEnd="//@children.1/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,12" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="233,193"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Journey->program/Destination*program/Journey-Soyatec::Import->program/Destination" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.3/@children.2" label="//@children.1/@sourceConnections.3/@children.0" sourceEnd="//@children.1/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,138" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,78"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.3 //@children.4/@sourceConnections.5 //@children.3/@sourceConnections.0 //@children.0/@sourceConnections.0" name="Destination" location="570,797" size="158,157" id="program/Destination" runTimeClassModel="get_Distance(),Destination(Ljava.lang.String;F),get_Adress(),set_Adress(Ljava.lang.String;),speak(),set_Distance(F)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="91,108">
+      <children xsi:type="editmodel:MethodEditModel" name="Destination" id="program/Destination#Destination(Ljava.lang.String;F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Adress" id="program/Destination#get_Adress()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Distance" id="program/Destination#get_Distance()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Adress" id="program/Destination#set_Adress(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Distance" id="program/Destination#set_Distance(F)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="speak" id="program/Destination#speak()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Destination@place+program/Journey@" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="place" location="158,107" id="program/Destination@place+program/Journey@|program/Destination#place" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - place" location="735,911" size="35,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="735,885" size="6,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,142" id="program/Destination@place+program/Journey@|program/Journey#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Destination@destinations+program/Year@" source="//@children.2" target="//@children.4" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="destinations" location="47,0" id="program/Destination@destinations+program/Year@|program/Destination#destinations" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - destinations" location="543,777" size="66,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="623,777" size="4,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="29,283" id="program/Destination@destinations+program/Year@|program/Year#"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.5/@sourceConnections.0" name="Reader" location="1229,210" size="240,337" id="program/Reader" runTimeClassModel="get_Journeys_file(),load_previous_destinations(),get_Previous_destinations_file(),Reader(Lprogram.Year;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),get_Destinations_file(),get_Year(),load_journeys(),set_Taxi_file(Ljava.lang.String;),set_Destinations_file(Ljava.lang.String;),load_taxies(),set_Year(Lprogram.Year;),load_destinations(),get_Taxi_file(),set_Journeys_file(Ljava.lang.String;),load(),set_Previous_destinations_file(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="173,288">
+      <children xsi:type="editmodel:MethodEditModel" name="Reader" id="program/Reader#Reader(Lprogram.Year;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Destinations_file" id="program/Reader#get_Destinations_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Journeys_file" id="program/Reader#get_Journeys_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Previous_destinations_file" id="program/Reader#get_Previous_destinations_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Taxi_file" id="program/Reader#get_Taxi_file()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Year" id="program/Reader#get_Year()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="load" id="program/Reader#load()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="load_destinations" id="program/Reader#load_destinations()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="load_journeys" id="program/Reader#load_journeys()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="load_previous_destinations" id="program/Reader#load_previous_destinations()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="load_taxies" id="program/Reader#load_taxies()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Destinations_file" id="program/Reader#set_Destinations_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Journeys_file" id="program/Reader#set_Journeys_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Previous_destinations_file" id="program/Reader#set_Previous_destinations_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Taxi_file" id="program/Reader#set_Taxi_file(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Year" id="program/Reader#set_Year(Lprogram.Year;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Reader->program/Destination*program/Reader-Soyatec::Import->program/Destination" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,253" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,22"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Reader->program/Year*program/Reader-Soyatec::Import->program/Year" source="//@children.3" target="//@children.4" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,167" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="283,141"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Reader->program/Journey*program/Reader-Soyatec::Import->program/Journey" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.2/@children.2" label="//@children.3/@sourceConnections.2/@children.0" sourceEnd="//@children.3/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="84,337" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="99,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Reader->program/Taxi*program/Reader-Soyatec::Import->program/Taxi" source="//@children.3" target="//@children.6" targetEnd="//@children.3/@sourceConnections.3/@children.2" label="//@children.3/@sourceConnections.3/@children.0" sourceEnd="//@children.3/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="248,149"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1 //@children.1/@sourceConnections.1 //@children.3/@sourceConnections.1 //@children.0/@sourceConnections.1 //@children.5/@sourceConnections.2" name="Year" location="831,236" size="283,283" id="program/Year" runTimeClassModel="get_Destinations(),get_Journeys(),set_Taxies(Ljava.util.HashSet;),Year(I),find_Destination_adress(Ljava.lang.String;),set_Year_nb(I),get_Taxies(),get_Year_nb(),set_Previous_year_destinations(Ljava.util.HashSet;),get_Previous_year_destinations(),set_Destinations(Ljava.util.HashSet;),find_Taxi_number(Ljava.lang.String;),set_Journeys(Ljava.util.ArrayList;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,234">
+      <children xsi:type="editmodel:MethodEditModel" name="Year" id="program/Year#Year(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="find_Destination_adress" id="program/Year#find_Destination_adress(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="find_Taxi_number" id="program/Year#find_Taxi_number(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Destinations" id="program/Year#get_Destinations()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Journeys" id="program/Year#get_Journeys()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Previous_year_destinations" id="program/Year#get_Previous_year_destinations()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Taxies" id="program/Year#get_Taxies()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Year_nb" id="program/Year#get_Year_nb()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Destinations" id="program/Year#set_Destinations(Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Journeys" id="program/Year#set_Journeys(Ljava.util.ArrayList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Previous_year_destinations" id="program/Year#set_Previous_year_destinations(Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Taxies" id="program/Year#set_Taxies(Ljava.util.HashSet;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Year_nb" id="program/Year#set_Year_nb(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Year@year+program/Reader@" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="year" location="283,170" id="program/Year@year+program/Reader@|program/Year#year" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - year" location="1121,413" size="31,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1121,387" size="6,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,171" id="program/Year@year+program/Reader@|program/Reader#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Year@year+program/Writer@" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="year" location="0,234" id="program/Year@year+program/Writer@|program/Year#year" attachSource="true" multiplicityLabel="//@children.4/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.4/@sourceConnections.1/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - year" location="792,451" size="31,12" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="817,477" size="6,12" anchorKind="FirstPart"/>
+      </children>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="305,0" id="program/Year@year+program/Writer@|program/Writer#"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="program/Taxi@taxies+program/Year@" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.2/@children.2" label="//@children.4/@sourceConnections.2/@children.0" sourceEnd="//@children.4/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" size="0,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,30" id="program/Taxi@taxies+program/Year@|program/Year#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="taxies" location="248,162" id="program/Taxi@taxies+program/Year@|program/Taxi#taxies" multiplicityLabel="//@children.4/@sourceConnections.2/@children.2/@children.1" roleLabel="//@children.4/@sourceConnections.2/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - taxies" location="539,247" size="38,12" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="539,273" size="4,12" anchorKind="LastPart"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Year-Soyatec::Import->program/Journey" source="//@children.4" target="//@children.1" targetEnd="//@children.4/@sourceConnections.3/@children.2" label="//@children.4/@sourceConnections.3/@children.0" sourceEnd="//@children.4/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="241,283" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="12,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Year->program/Taxi*program/Year-Soyatec::Import->program/Taxi" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.4/@children.2" label="//@children.4/@sourceConnections.4/@children.0" sourceEnd="//@children.4/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,34" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="248,191"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Year->program/Destination*program/Year-Soyatec::Import->program/Destination" source="//@children.4" target="//@children.2" targetEnd="//@children.4/@sourceConnections.5/@children.2" label="//@children.4/@sourceConnections.5/@children.0" sourceEnd="//@children.4/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,283" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="130,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Program" location="884,84" size="107,67" id="program/Program" runTimeClassModel="main([Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="51,18">
+      <children xsi:type="editmodel:MethodEditModel" name="main" id="program/Program#main([Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Program->program/Reader*program/Program-Soyatec::Import->program/Reader*program/Program->program/Reader" source="//@children.5" target="//@children.3" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,67" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,92"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Program->program/Writer*program/Program-Soyatec::Import->program/Writer*program/Program->program/Writer" source="//@children.5" target="//@children.0" targetEnd="//@children.5/@sourceConnections.1/@children.2" label="//@children.5/@sourceConnections.1/@children.0" sourceEnd="//@children.5/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="17,67" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,14"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="program/Program->program/Year*program/Program-Soyatec::Import->program/Year" source="//@children.5" target="//@children.4" targetEnd="//@children.5/@sourceConnections.2/@children.2" label="//@children.5/@sourceConnections.2/@children.0" sourceEnd="//@children.5/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,12" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,67" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="106,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.1/@sourceConnections.2 //@children.4/@sourceConnections.2 //@children.4/@sourceConnections.4 //@children.3/@sourceConnections.3 //@children.0/@sourceConnections.3" name="Taxi" location="285,104" size="248,193" id="program/Taxi" runTimeClassModel="Taxi(Ljava.lang.String;Ljava.lang.String;),set_Name(Ljava.lang.String;),set_Registration_Number(Ljava.lang.String;),set_Places_visited(Ljava.util.ArrayList;),speak(),get_Places_visited(),get_Name(),get_Registration_Number()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="148,144">
+      <children xsi:type="editmodel:MethodEditModel" name="Taxi" id="program/Taxi#Taxi(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Name" id="program/Taxi#get_Name()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Places_visited" id="program/Taxi#get_Places_visited()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="get_Registration_Number" id="program/Taxi#get_Registration_Number()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Name" id="program/Taxi#set_Name(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Places_visited" id="program/Taxi#set_Places_visited(Ljava.util.ArrayList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="set_Registration_Number" id="program/Taxi#set_Registration_Number(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="speak" id="program/Taxi#speak()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" level="-1" showScope="InPackage" properties="wireOptions=0;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" showMethodsParameterTypes="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

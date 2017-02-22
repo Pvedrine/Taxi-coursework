@@ -1,0 +1,5 @@
+Falkirk;23
+Stirling;31
+St Andrews;31
+Dundee;37
+Glasgow;42

@@ -1,0 +1,15 @@
+HW01 AAA;Stirling;2
+HW02 AAA;Glasgow;1
+HW03 AAA;St Andrews;4
+HW04 AAA;Glasgow;1
+HW03 AAA;Dundee;2
+HW02 AAA;St Andrews;2
+HW02 AAA;Falkirk;1
+HW01 AAA;Glasgow;4
+HW01 AAA;Dundee;4
+HW04 AAA;St Andrews;4
+HW04 AAA;Glasgow;3
+HW03 AAA;Stirling;2
+HW04 AAA;Dundee;1
+HW03 AAA;Stirling;1
+HW02 AAA;St Andrews;1
