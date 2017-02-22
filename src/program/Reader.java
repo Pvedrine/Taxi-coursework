@@ -70,7 +70,7 @@ public class Reader {
 		this.previous_destinations_file = previous_destinations_file;
 	}	
 	
-	public void load_taxies() {
+	public void load_taxies() throws WrongFormatID {
 		String data [] = new String[2];
 		BufferedReader buff = null;
 		try {
@@ -79,11 +79,15 @@ public class Reader {
 	    	while(inputLine != null){  
 	    		//split line into parts
 	    		data  = inputLine.split(";");
-	    		Taxi t = new Taxi(data[0], data[1]);
-	    		this.year.get_Taxies().add(t);
-	            //read next line
-	            inputLine = buff.readLine();
-	            
+	    		if((!(data[0].matches("HW[0-9]{2} .*"))||(data[0].length()>8))) {
+	    			throw new WrongFormatID(data[0]);
+	    		}
+	    		else {
+	    			Taxi t = new Taxi(data[0], data[1]);
+		    		this.year.get_Taxies().add(t);
+		            //read next line
+		            inputLine = buff.readLine();
+	    		}  
 	        }
         }
         catch(FileNotFoundException e) {
@@ -139,7 +143,7 @@ public class Reader {
         }
 	}
 
-	public void load_journeys() {
+	public void load_journeys() throws WrongDistanceException, NoMatchingTaxi, NoMatchingDestination {
 		String data [] = new String[3];
 		BufferedReader buff = null;
 		try {
@@ -150,6 +154,9 @@ public class Reader {
 	    		data  = inputLine.split(";");
 	    		Taxi t = this.year.find_Taxi_number(data[0]);
 	    		Destination d = this.year.find_Destination_adress(data[1]);
+	    		if(d.get_Distance()<0 || d.get_Distance() > 1000) {
+	    			throw new WrongDistanceException(d.get_Distance());
+	    		}
 	    		int passengers = Integer.parseInt(data[2].trim());
 	    		Journey j = new Journey(t, d, passengers);
 	    		this.year.get_Journeys().add(j);
@@ -208,7 +215,7 @@ public class Reader {
         }
 	}
 
-	public void load() {
+	public void load() throws WrongDistanceException, WrongFormatID, NoMatchingTaxi, NoMatchingDestination {
 		load_taxies();
 		load_destinations();
 		load_journeys();

@@ -4,7 +4,7 @@ package program;
 public class Program {
 
 	//Main method of the program
-	public static void main(String[] args) {
+	public static void main(String[] args) throws WrongDistanceException, WrongFormatID, NoMatchingTaxi, NoMatchingDestination {
 		// TODO Auto-generated method stub
 		//We create a year object to store and work with the data
 		Year y_2015 = new Year(2015);

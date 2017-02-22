@@ -133,13 +133,16 @@ public class Year {
 	/**
 	 * Method to get a taxi using its registration_number
 	 */
-	public Taxi find_Taxi_number(String registration_number) {
+	public Taxi find_Taxi_number(String registration_number) throws NoMatchingTaxi {
 		Taxi result = null;
-		//We go through all the taxies to find the one with the registration number given in parameter
 		for(Taxi t : this.taxies) {
 			if(t.get_Registration_Number().equals(registration_number)) {
 				result = t;
 			}
+		}
+		if(result==null)
+		{
+			throw new NoMatchingTaxi(registration_number);
 		}
 		return result;
 	}
@@ -147,12 +150,15 @@ public class Year {
 	/**
 	 * Method to get the address of a destination
 	 */
-	public Destination find_Destination_adress(String adress) {
+	public Destination find_Destination_adress(String adress) throws NoMatchingDestination {
 		Destination result = null;
 		for(Destination d : this.destinations) {
 			if(d.get_Adress().equals(adress)) {
 				result = d;
 			}
+		}
+		if(result==null) {
+			throw new NoMatchingDestination(adress);
 		}
 		return result;
 	}
