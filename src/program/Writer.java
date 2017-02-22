@@ -134,7 +134,7 @@ public class Writer {
 		    					journeys.get(i).get_Place().get_Adress()+"     "+
 		    						journeys.get(i).get_Place().get_Distance()+" miles  "+
 		    							journeys.get(i).get_Passengers()+" person(s)  "+
-		    								"Cost :Â£"+journeys.get(i).get_Cost()+"\n");
+		    								"Cost : £"+journeys.get(i).get_Cost()+"\n");
 		    }
 		    writer.write("\nCHARGES FOR THE CHEAPEST 5 JOURNEYS\n");
 		    for(int i=journeys.size()-1; i>journeys.size()-6; i--) {
@@ -142,7 +142,7 @@ public class Writer {
 		    					journeys.get(i).get_Place().get_Adress()+"     "+
 		    						journeys.get(i).get_Place().get_Distance()+" miles  "+
 		    							journeys.get(i).get_Passengers()+" person(s)  "+
-		    								"Cost :Â£"+journeys.get(i).get_Cost()+"\n");
+		    								"Cost : £"+journeys.get(i).get_Cost()+"\n");
 		    }
 		    writer.close();
 		} 
