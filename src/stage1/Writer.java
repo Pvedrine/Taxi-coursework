@@ -1,7 +1,8 @@
-package program;
+package stage1;
 import java.util.HashSet;
 import java.util.ArrayList;
 import java.io.*;
+import taxiClasses;
 
 public class Writer {
 	/**
@@ -165,7 +166,7 @@ public class Writer {
 			System.exit(1); 
 		}
 		//Print information message to confirm good execution of task 1
-		System.out.println("Task 1 printed in: "+this.task1_file);
+		System.out.println("Task #1 printed in: "+this.task1_file);
 	}
 	
 	/**
@@ -246,7 +247,7 @@ public class Writer {
 			System.exit(1); 
 		}
 		//Print information message to confirm good execution of task 2
-		System.out.println("Task 2 printed in: "+this.task2_file);
+		System.out.println("Task #2 printed in: "+this.task2_file);
 	}
 	
 	/**
@@ -306,7 +307,7 @@ public class Writer {
 			System.exit(1); 
 		}
 		//Print information message to confirm good execution of task 3
-		System.out.println("Task 3 printed in: "+this.task3_file);
+		System.out.println("Task #3 printed in: "+this.task3_file);
 	}
 	
 	/**

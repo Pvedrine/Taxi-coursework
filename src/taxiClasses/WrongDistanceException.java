@@ -1,4 +1,4 @@
-package program;
+package taxiClasses;
 
 public class WrongDistanceException extends Exception {
 	

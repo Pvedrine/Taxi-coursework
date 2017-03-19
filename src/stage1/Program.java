@@ -1,5 +1,6 @@
-package program;
+package stage1;
 
+import taxiClasses;
 //This class is the main class of the program and contains the main method
 public class Program {
 

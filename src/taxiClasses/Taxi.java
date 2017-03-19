@@ -1,4 +1,4 @@
-package program;
+package taxiClasses;
 import java.util.ArrayList;
 
 //This class contains all the informations about a Taxi

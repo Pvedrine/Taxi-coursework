@@ -1,4 +1,4 @@
-package program;
+package taxiClasses;
 
 //This class contains all the informations about a journey
 public class Journey {

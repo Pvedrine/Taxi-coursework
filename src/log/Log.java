@@ -16,7 +16,7 @@ public class LogFile {
 	      return instance;
 	   }
 
-	   public void printIntoLogFile(String string){
+	   public void record(String string){
 		   printIntoFile(string);
 	   }
 	   
