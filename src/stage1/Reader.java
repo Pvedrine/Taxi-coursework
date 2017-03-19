@@ -1,6 +1,6 @@
 package stage1;
 import java.io.*;
-import taxiClasses;
+import taxiClasses.*;
 
 public class Reader {
 	/**
@@ -217,8 +217,10 @@ public class Reader {
 
 	/**
 	 * Method to load all the journeys of the year
+	 * @throws NoMatchingDestination 
+	 * @throws NoMatchingTaxi 
 	 */
-	public void load_journeys() {
+	public void load_journeys() throws NoMatchingDestination, NoMatchingTaxi {
 		String data [] = new String[3];
 		//We create a buffer
 		BufferedReader buff = null;
@@ -306,8 +308,10 @@ public class Reader {
 
 	/**
 	 * Method to load all the data 
+	 * @throws NoMatchingTaxi 
+	 * @throws NoMatchingDestination 
 	 */
-	public void load() {
+	public void load() throws NoMatchingDestination, NoMatchingTaxi {
 		load_taxies();
 		load_destinations();
 		load_journeys();

@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import program.*;
+import taxiClasses.*;
+import stage1.*;
 public class TestReader {
 
 	@Test

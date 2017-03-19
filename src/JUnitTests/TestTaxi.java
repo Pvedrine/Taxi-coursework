@@ -3,7 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import program.Taxi;
+import taxiClasses.*;
 public class TestTaxi {
 
 	@Test

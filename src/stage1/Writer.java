@@ -2,7 +2,7 @@ package stage1;
 import java.util.HashSet;
 import java.util.ArrayList;
 import java.io.*;
-import taxiClasses;
+import taxiClasses.*;
 
 public class Writer {
 	/**

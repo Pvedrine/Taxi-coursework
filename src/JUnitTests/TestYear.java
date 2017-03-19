@@ -1,10 +1,14 @@
 package JUnitTests;
 
 import static org.junit.Assert.*;
-import org.junit.Test;
+
 import java.util.HashSet;
-import program.Taxi;
-import program.*;
+
+import org.junit.Test;
+
+import taxiClasses.Taxi;
+import taxiClasses.Year;
+
 public class TestYear {
 
 	@Test (expected = IllegalArgumentException.class)

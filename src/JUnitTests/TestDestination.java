@@ -1,7 +1,8 @@
 package JUnitTests;
 
 import static org.junit.Assert.*;
-import program.Destination;
+
+import taxiClasses.*;
 
 import org.junit.Test;
 
