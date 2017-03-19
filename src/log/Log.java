@@ -7,18 +7,20 @@ public class Log {
 
 	   //create an object of SingleObject
 	   private static Log instance = new Log();
-	   private static String filename = System.getProperty("user.dir") + "\\log.txt" ;
+	   private static String filename;
 
 	   //make the constructor private so that this class cannot be
 	   //instantiated
-	   private Log(){}
+	   private Log(){
+		   Log.filename = System.getProperty("user.dir") + "\\log.txt" ;
+	   }
 
 	   //Get the only object available
-	   public static Log getInstance(){
+	   public synchronized static Log getInstance(){
 	      return instance;
 	   }
 
-	   public void record(String string){
+	   public synchronized void record(String string){
 		   printIntoFile(string);
 	   }
 	   
@@ -28,7 +30,7 @@ public class Log {
 		   try {
 			   //Opens the file in append mode
 			   writer = new BufferedWriter(new OutputStreamWriter(
-					   new FileOutputStream(this.filename, true), "utf-8"));
+					   new FileOutputStream(Log.filename, true), "utf-8"));
 			   //We add the message to the end of the file
 			   writer.write(string + "\n");
 
