@@ -8,7 +8,7 @@ public class Program {
         View   view  = new View(model);
         @SuppressWarnings("unused")
 		Controller controller = new Controller(model, view);   
-        view.setVisible(true);
+        view.setVisible(true); 
 	}
 
-}
+} 
