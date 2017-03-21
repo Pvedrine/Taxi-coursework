@@ -147,7 +147,7 @@ public class Journey {
 	}
 	
 	public String toString(){
-		return "Taxi: "+this.driver.toString()+" ; Destination: "+this.place.toString()+" ; Passengers: "+this.passengers+" ; Cost"+this.cost;
+		return "Taxi: "+this.driver.toString()+" ; Destination: "+this.place.toString()+" ; Passengers: "+this.passengers+" ; Cost: "+this.cost;
 	}
 }
 

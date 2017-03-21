@@ -1,7 +1,10 @@
 package stage2;
 
 import java.util.ArrayList;
+import java.util.Random;
+
 import log.Log;
+import taxiClasses.Destination;
 import taxiClasses.Journey;
 import taxiClasses.Taxi;
 
@@ -31,17 +34,28 @@ public class Worker implements Runnable {
 	
 	public void run(){
 		Taxi taxiBeingBooked;
-		while(!(!model.isFinished() && this.model.getAllJourneysToAllocate().isEmpty())){
-			this.journeyBeingProcessed = model.getFirstJourneyToAllocate();
-			taxiBeingBooked = model.getOneTaxi();
-			this.journeyBeingProcessed.set_Driver(taxiBeingBooked);
-			model.addJourneyProcessed(this.journeyBeingProcessed);
-			Log.getInstance().record("Worker #" + this.workerID + ": " + this.journeyBeingProcessed.toString() + "\n");
-			try {
-				Thread.sleep(100*this.workerID);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		while(model.isFinished()){
+			if(this.workerID == 1){
+				this.model.addRandomJourneyToProcess();
+				try {
+					Thread.sleep(400*this.workerID);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else{
+				this.journeyBeingProcessed = model.getFirstJourneyToAllocate();
+				taxiBeingBooked = model.getOneTaxi();
+				this.journeyBeingProcessed.set_Driver(taxiBeingBooked);
+				model.addJourneyProcessed(this.journeyBeingProcessed);
+				Log.getInstance().record("Worker #" + this.workerID + ": " + this.journeyBeingProcessed.toString() + "\n");
+				try {
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 

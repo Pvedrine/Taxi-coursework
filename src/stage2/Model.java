@@ -1,9 +1,10 @@
 package stage2;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Observable;
+import java.util.Random;
+
 import log.Log;
 import taxiClasses.*;
 
@@ -12,7 +13,6 @@ public class Model extends Observable implements  Runnable {
 	private LinkedList<Journey> journeysToAllocate = new LinkedList<Journey>();
 	private ArrayList<Worker> workers = new ArrayList<Worker>();
 	private ArrayList<Journey> journeysAllocated = new ArrayList<Journey>();
-	private boolean stateFinished;
 	private Thread [] workThreads;
 	private View view;
 	
@@ -29,28 +29,28 @@ public class Model extends Observable implements  Runnable {
 		this.taxies.add(new Taxi("ABH444", "Raoul"));
 		this.journeysToAllocate.add(new Journey(null, new Destination("Edinburgh", 3), 2));
 		this.journeysToAllocate.add(new Journey(null, new Destination("London", 7), 4));
-		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 1));
 		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 3));
 	}
 	
 	///////////////////////////////////////////////////////////
 	//returns whether the program should be terminated or not
 	public boolean isFinished() {
-		
-		return stateFinished;
+		return !(this.journeysToAllocate.isEmpty() || this.taxies.isEmpty());
 	}
 	
 	//indicates end of program
-	public void setFinished(boolean state) {
-		stateFinished = state;
-	
-	}
 
 	public synchronized Taxi getOneTaxi(){
 		return this.taxies.removeFirst();
 	}
 	public void addJourneyToProcess(Journey journeyToAdd){
 		this.journeysToAllocate.add(journeyToAdd);
+	}
+
+	public void addRandomJourneyToProcess(){
+		Random rand = new Random(); 
+		Journey j1 = new Journey(null, new Destination("Inverness", rand.nextInt(15 - 0 + 1) + 0), rand.nextInt(4 - 1 + 1) + 1);
+		addJourneyToProcess(j1);
 	}
 	
 	public void addJourneyProcessed(Journey journeyToAdd){
@@ -61,8 +61,12 @@ public class Model extends Observable implements  Runnable {
 		return this.journeysToAllocate.removeFirst();
 	}
 	
-	public LinkedList<Journey> getAllJourneysToAllocate(){
+	public synchronized LinkedList<Journey> getAllJourneysToAllocate(){
 		return this.journeysToAllocate;
+	}
+	
+	public synchronized LinkedList<Taxi> getAllTaxies(){
+		return this.taxies;
 	}
 	
 	public ArrayList<Worker> getWorkerList(){
