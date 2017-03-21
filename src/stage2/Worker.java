@@ -36,7 +36,13 @@ public class Worker implements Runnable {
 			taxiBeingBooked = model.getOneTaxi();
 			this.journeyBeingProcessed.set_Driver(taxiBeingBooked);
 			model.addJourneyProcessed(this.journeyBeingProcessed);
-		Log.getInstance().record(this.workerID + " : " + this.journeyBeingProcessed.toString() + "\n");
+			Log.getInstance().record("Worker #" + this.workerID + ": " + this.journeyBeingProcessed.toString() + "\n");
+			try {
+				Thread.sleep(100*this.workerID);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}

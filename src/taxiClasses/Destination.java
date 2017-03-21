@@ -55,8 +55,9 @@ public class Destination {
 	
 	/**
 	 * Function displaying the properties of the object
+	 * @return 
 	 */
-	public void speak() {
-		System.out.println("Adress: "+this.address+" ; Distance: "+this.distance);
+	public String toString() {
+		return "Address: "+this.address+" ; Distance: "+this.distance;
 	}
 }

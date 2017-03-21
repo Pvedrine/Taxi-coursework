@@ -145,5 +145,9 @@ public class Journey {
 	public void show_Properties() {
 		System.out.println("Taxi: "+this.driver.get_Registration_Number()+" ; Destination: "+this.place.get_Adress()+" ; Passengers: "+this.passengers+" ; Cost: "+this.cost);
 	}
+	
+	public String toString(){
+		return "Taxi: "+this.driver.toString()+" ; Destination: "+this.place.toString()+" ; Passengers: "+this.passengers+" ; Cost"+this.cost;
+	}
 }
 

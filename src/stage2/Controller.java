@@ -23,6 +23,7 @@ public class Controller {
 			Thread thread = new Thread (model);
 			thread.start();
 
+			view.enableProcessButton();
 	    }
 	}
 

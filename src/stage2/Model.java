@@ -2,16 +2,16 @@ package stage2;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Observable;
 import log.Log;
-import taxiClasses.Journey;
-import taxiClasses.Taxi;
+import taxiClasses.*;
 
 public class Model extends Observable implements  Runnable {
-	private HashSet<Taxi> taxies = new HashSet<Taxi>();
-	private ArrayList<Journey> journeysToAllocate = new ArrayList<Journey>();
+	private LinkedList<Taxi> taxies = new LinkedList<Taxi>();
+	private LinkedList<Journey> journeysToAllocate = new LinkedList<Journey>();
 	private ArrayList<Worker> workers = new ArrayList<Worker>();
-	private HashSet<Journey> journeysAllocated = new HashSet<Journey>();
+	private ArrayList<Journey> journeysAllocated = new ArrayList<Journey>();
 	private boolean stateFinished;
 	private Thread [] workThreads;
 	private View view;
@@ -23,6 +23,14 @@ public class Model extends Observable implements  Runnable {
 			workers.add(c);
 			
 		}
+		this.taxies.add(new Taxi("ABH222", "Richard"));
+		this.taxies.add(new Taxi("ABH111", "Didier"));
+		this.taxies.add(new Taxi("ABH333", "Robert"));
+		this.taxies.add(new Taxi("ABH444", "Raoul"));
+		this.journeysToAllocate.add(new Journey(null, new Destination("Edinburgh", 3), 2));
+		this.journeysToAllocate.add(new Journey(null, new Destination("London", 7), 4));
+		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 1));
+		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 3));
 	}
 	
 	///////////////////////////////////////////////////////////
@@ -39,9 +47,7 @@ public class Model extends Observable implements  Runnable {
 	}
 
 	public synchronized Taxi getOneTaxi(){
-		Taxi taxi = this.taxies.iterator().next();
-		this.taxies.remove(taxi);
-		return taxi;
+		return this.taxies.removeFirst();
 	}
 	public void addJourneyToProcess(Journey journeyToAdd){
 		this.journeysToAllocate.add(journeyToAdd);
@@ -52,10 +58,10 @@ public class Model extends Observable implements  Runnable {
 	}
 	
 	public synchronized Journey getFirstJourneyToAllocate(){
-		return getAllJourneysToAllocate().get(0);
+		return this.journeysToAllocate.removeFirst();
 	}
 	
-	public ArrayList<Journey> getAllJourneysToAllocate(){
+	public LinkedList<Journey> getAllJourneysToAllocate(){
 		return this.journeysToAllocate;
 	}
 	
@@ -70,6 +76,8 @@ public class Model extends Observable implements  Runnable {
     	{
     		workThreads[cind] = new Thread(workers.get(cind));
     		workThreads[cind].start();
+    	}
+    	for(int cind = 0; cind < workers.size(); cind ++){
     		try {
 				workThreads[cind].join();
 			} catch (InterruptedException e) {
@@ -77,8 +85,8 @@ public class Model extends Observable implements  Runnable {
 				e.printStackTrace();
 			}
     	}
-    	System.out.println("Finishing");
-    	Log.getInstance().record("Finishing");
+    	System.out.println("Finishing\n");
+    	Log.getInstance().record("Finishing\n");
 		
 	}
 

@@ -83,6 +83,10 @@ public class View extends JFrame implements Observer{
 	 public void disableProcessButton() {
 	    	processButton.setEnabled(false);
 	    }
+	 
+	 public void enableProcessButton(){
+		 	processButton.setEnabled(true);
+	 }
 	/////////////////////////////////////////////////////////
 	 
 	public synchronized void update(Observable o, Object args) {

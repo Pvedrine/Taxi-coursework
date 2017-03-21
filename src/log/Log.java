@@ -13,6 +13,7 @@ public class Log {
 	   //instantiated
 	   private Log(){
 		   Log.filename = System.getProperty("user.dir") + "\\log.txt" ;
+		   record("Beginning\n");
 	   }
 
 	   //Get the only object available
@@ -40,6 +41,7 @@ public class Log {
 			catch (IOException ex) {
 				//We print what the error is
 				ex.printStackTrace();
+				System.out.println("Impossible to printo into log file");
 				System.exit(1); 
 			}
 	   }
