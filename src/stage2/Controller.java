@@ -11,10 +11,11 @@ public class Controller {
 	public Controller(Model model, View view){
 		this.model = model;
 		this.view = view;
+		this.view.addProcessBookingJourneyListener(new ProcessBookingJourneyController());
 	}
 
 
-	class ProcessBidsController  implements ActionListener
+	class ProcessBookingJourneyController  implements ActionListener
 	{
 	    public void actionPerformed(ActionEvent e) 
 	    { 
