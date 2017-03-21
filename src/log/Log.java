@@ -7,6 +7,7 @@ public class Log {
 
 	   //create an object of Log
 	   private static Log instance = new Log();
+	   //To store the place where we store the data
 	   private static String filename;
 
 	   //make the constructor private so that this class cannot be
@@ -18,7 +19,7 @@ public class Log {
 	   }
 
 	   //Get the only object available
-	 //It is synchronized so only one thread can use this method at the same time
+	   //It is synchronized so only one thread can use this method at the same time
 	   public synchronized static Log getInstance(){
 	      return instance;
 	   }
