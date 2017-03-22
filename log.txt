@@ -330,3 +330,119 @@ Cost: 14.0
 
 Finishing
 
+Beginning
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 6.0
+Passengers: 1
+Cost: 6.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 14.0
+Passengers: 3
+Cost: 21.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 6.0
+Passengers: 4
+Cost: 10.5
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 14.0
+Passengers: 2
+Cost: 17.5
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #3: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 6.0
+Passengers: 1
+Cost: 6.0
+
+
+Finishing
+
+Beginning
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 4
+Cost: 26.25
+
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 10.0
+Passengers: 4
+Cost: 17.5
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 2.0
+Passengers: 1
+Cost: 2.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 1.0
+Passengers: 3
+Cost: 1.5
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 8.0
+Passengers: 1
+Cost: 8.0
+
+
+Worker #2: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #3: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 4
+Cost: 26.25
+
+
+Finishing
+

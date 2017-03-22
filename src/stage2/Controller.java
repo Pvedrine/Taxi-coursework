@@ -25,6 +25,8 @@ public class Controller {
 		this.view = view;
 		//Add an event handler from the view to the model
 		this.view.addProcessBookingJourneyListener(new ProcessBookingJourneyController());
+		//To initialize the view with the data at startup
+		this.model.modelChanged();
 	}
 
 	/**
