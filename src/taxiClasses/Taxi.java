@@ -86,6 +86,9 @@ public class Taxi {
 		System.out.println("Reg.number: "+this.registration_number+" ; Name: "+this.name);
 	}
 	
+	/**
+	 * overridden toString to print properties
+	 */
 	public String toString(){
 		return "Reg number: "+this.registration_number+" ; Name: "+this.name;
 	}

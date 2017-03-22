@@ -54,8 +54,7 @@ public class Destination {
 	}
 	
 	/**
-	 * Function displaying the properties of the object
-	 * @return 
+	 * overridden toString to print properties
 	 */
 	public String toString() {
 		return "Address: "+this.address+" ; Distance: "+this.distance;
