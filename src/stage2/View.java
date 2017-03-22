@@ -84,6 +84,8 @@ public class View extends JFrame implements Observer{
         pack();
         setVisible(true);
         this.setResizable(false);
+      	//To initialize the view with the data at startup
+      	this.model.modelChanged();
     }
     
    

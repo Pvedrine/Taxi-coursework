@@ -25,8 +25,6 @@ public class Controller {
 		this.view = view;
 		//Add an event handler from the view to the model
 		this.view.addProcessBookingJourneyListener(new ProcessBookingJourneyController());
-		//To initialize the view with the data at startup
-		this.model.modelChanged();
 	}
 
 	/**
@@ -38,7 +36,7 @@ public class Controller {
 	    { 
 	    	//Deactivate the ProcessButton not to be able to click again
 	    	view.disableProcessButton();
-	    	//creathe thread for non blocking GUI
+	    	//create thread for non blocking GUI
 			Thread thread = new Thread (model);
 			thread.start();
 			//Enable the ProcessButton to launch the app again
