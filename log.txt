@@ -128,3 +128,205 @@ Passengers: 1
 Cost: 13.0
 
 
+Beginning
+
+Worker #3: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #2: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #3: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 5.0
+Passengers: 3
+Cost: 7.5
+
+
+Finishing
+
+Beginning
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 1
+Cost: 15.0
+
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 2.0
+Passengers: 3
+Cost: 3.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 5.0
+Passengers: 2
+Cost: 6.25
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 11.0
+Passengers: 2
+Cost: 13.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 3.0
+Passengers: 4
+Cost: 5.25
+
+
+Worker #3: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 1
+Cost: 15.0
+
+
+Finishing
+
+Beginning
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 1
+Cost: 15.0
+
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 14.0
+Passengers: 3
+Cost: 21.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 7.0
+Passengers: 1
+Cost: 7.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 12.0
+Passengers: 2
+Cost: 15.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 3.0
+Passengers: 4
+Cost: 5.25
+
+
+Worker #3: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 15.0
+Passengers: 1
+Cost: 15.0
+
+
+Finishing
+
+Beginning
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard
+Destination: Address: Edinburgh ; Distance: 3.0
+Passengers: 2
+Cost: 3.75
+
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier
+Destination: Address: London ; Distance: 7.0
+Passengers: 4
+Cost: 12.25
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 8.0
+Passengers: 4
+Cost: 14.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 12.0
+Passengers: 1
+Cost: 12.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 5.0
+Passengers: 1
+Cost: 5.0
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 9.0
+Passengers: 4
+Cost: 15.75
+
+
+Worker #1: Taxi: Unknown 
+Destination: Address: Inverness ; Distance: 3.0
+Passengers: 3
+Cost: 4.5
+
+
+Worker #2: Taxi: Reg number: ABH333 ; Name: Robert
+Destination: Address: Glasgow ; Distance: 7.0
+Passengers: 3
+Cost: 10.5
+
+
+Worker #3: Taxi: Reg number: ABH444 ; Name: Raoul
+Destination: Address: Inverness ; Distance: 8.0
+Passengers: 4
+Cost: 14.0
+
+
+Finishing
+

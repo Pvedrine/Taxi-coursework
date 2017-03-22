@@ -95,9 +95,10 @@ public class Model extends Observable implements  Runnable {
 	 * Method to add a journey to the list of journey that have to be processed
 	 * Some arguments are random, others are fixed so it is simpler
 	 */
-	public void addRandomJourneyToProcess(){
+	public void addRandomJourneyToProcess(Worker worker){
 		Random rand = new Random(); 
 		Journey j1 = new Journey(null, new Destination("Inverness", rand.nextInt(15 - 0 + 1) + 0), rand.nextInt(4 - 1 + 1) + 1);
+		Log.getInstance().record("Worker #" + worker.getWorkerId() + ": " + j1.toString() + "\n");
 		addJourneyToProcess(j1);
 	}
 	

@@ -71,11 +71,11 @@ public class Worker implements Runnable {
 			//if worker 1
 			if(this.workerID == 1){
 				//Insert a new journey to the list of journey 
-				this.model.addRandomJourneyToProcess();
+				this.model.addRandomJourneyToProcess(this);
 				try {
 					//Sleep for some time
 					//Enough so the other threads can work and we don't have an infinite list of journeys
-					Thread.sleep(400*this.workerID);
+					Thread.sleep(400);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
