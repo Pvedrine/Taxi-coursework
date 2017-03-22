@@ -1,10 +1,8 @@
 package stage2;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import log.Log;
-import taxiClasses.Destination;
 import taxiClasses.Journey;
 import taxiClasses.Taxi;
 
