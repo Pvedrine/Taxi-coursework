@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -16,16 +17,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-/**
- * The class implements Observer for the use of MVC
- * The class extends JFrame to use its graphical elements
- */
-public class View extends JFrame implements Observer{
+import taxiClasses.Taxi;
+import taxiClasses.Journey;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
+public class View extends JFrame implements Observer{
 
 	/**
 	 * In this property is stored the button to process the data
@@ -51,11 +47,10 @@ public class View extends JFrame implements Observer{
 	 * In this property is stored the list of graphical elements for the workers
 	 */
     private JTextArea [] workers ;
+    private JPanel panelWorkers;
+    private JPanel panelLists;
 
-    /**
-	 * constructor of the class
-	 * The graphical elements are created here
-	 */
+    
     public View(Model model)
     {
         this.model = model;
@@ -71,26 +66,48 @@ public class View extends JFrame implements Observer{
         setLocation(10,20);
  
         
+        JPanel panel = new JPanel(new GridLayout(2,1));
+        JPanel panel2 = createCustWorkPanel();
+        JPanel panel3 = createCustListPanel();
+        panel.add(panel2);
+        panel.add(panel3);
+        
+        setPanelWorkers(panel2);
+        setPanelLists(panel3);
+        
+        
         //add button panel and result field to the content pane
         Container contentPane = getContentPane();
         contentPane.add(createNorthPanel(), BorderLayout.NORTH);
-        contentPane.add(createCustPanel(), BorderLayout.CENTER);
+        contentPane.add(panel, BorderLayout.CENTER);
         //pack and set visible
         pack();
         setVisible(true);
+        this.setResizable(false);
     }
     
    
-    private JPanel createCustPanel() {
-    	//cheating - know there are 6 customers
-    	JPanel custPanel = new JPanel(new GridLayout (0, numWorkers/2));
+    private JPanel createCustWorkPanel() {
+    	//We want as many columns as we have workers
+    	JPanel custPanel = new JPanel(new GridLayout (1, numWorkers));
 		workers  = new JTextArea [numWorkers];
-		for (int i = 1; i < numWorkers; i++) {
-			workers [i]= new JTextArea(15,80);
+		for (int i = 0; i < numWorkers; i++) {
+			workers [i]= new JTextArea(20,40);
 			//monospaced allows nice tabular layout
-			workers[i].setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
-			workers [i].setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.LIGHT_GRAY));
+			//workers[i].setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
+			workers[i].setBorder(BorderFactory.createMatteBorder(30, 4, 4, 4, Color.LIGHT_GRAY));
 			custPanel.add(workers[i]);
+		}
+		return custPanel;
+    }
+    
+    private JPanel createCustListPanel() {
+    	//We want as many columns as we have workers
+    	JPanel custPanel = new JPanel(new GridLayout (1, 2));
+		for (int i = 0; i < 2; i++) {
+			JTextArea list = new JTextArea(20,40);
+			list.setBorder(BorderFactory.createMatteBorder(30, 4, 4, 4, Color.LIGHT_GRAY));
+			custPanel.add(list);
 		}
 		return custPanel;
     }
@@ -104,46 +121,66 @@ public class View extends JFrame implements Observer{
     }
     
 
-    /**
-	  * Method to add an event listener to the button
-	  */
+	/////////////////////////////////////////////////////
+	//MVC pattern - allows listeners to be added
 	 public void addProcessBookingJourneyListener(ActionListener al) {
 			processButton.addActionListener(al);
 	    }
 
-	 /**
-	  * Method to disable the button to be pushed
-	  */
 	 public void disableProcessButton() {
 	    	processButton.setEnabled(false);
 	    }
 	 
-	 /**
-	  * Method to enable the button to be pushed
-	  */
 	 public void enableProcessButton(){
 		 	processButton.setEnabled(true);
 	 }
+	/////////////////////////////////////////////////////////
 	 
-	/**
-	 * Required method for Observable interface
-	 * Used to update graphical elements
-	 */
 	public synchronized void update(Observable o, Object args) {
-		//For all workers but worker 1 (because it doesn't process data, it adds some)
     	for (int i = 1; i < numWorkers; i++) {
-    		//We create a local variable
     		String report = "";
-    		//If the worker is processing something
-    		//When everything has been processed we update the view for graphical effect and everything must be clear
-    		if(workList.get(i).getProcessingJourney() != null){
-    			//Get the data to reload
+    		if(workList.get(i).getProcessingJourney()!= null)
     			report = workList.get(i).getProcessingJourney().toString();
+    		LinkedList<Taxi> taxies = model.getAllTaxies();
+    		LinkedList<Journey> journeys = model.getAllJourneysToAllocate();
+    		String str_taxies = "";
+    		String str_journeys = "";
+    		for(int j=0;j<taxies.size();j++) {
+    			str_taxies += taxies.get(j).toString() + "\n";
     		}
-    		//Set the data to display into the GUI
-			this.workers[i].setText( report);	
-			this.workers[i].setForeground(Color.BLACK);
-
+    		for(int j=0;j<journeys.size();j++) {
+    			str_journeys += journeys.get(j).toString() + "\n";
+    		}
+    		JTextArea jt_wk = (JTextArea) panelWorkers.getComponent(i);
+			jt_wk.setText(report);	
+			jt_wk.setForeground(Color.BLACK);
+			
+			JTextArea jt_tx = (JTextArea) panelLists.getComponent(1);
+			jt_tx.setText(str_taxies);
+			jt_tx.setForeground(Color.BLACK);
+			
+			JTextArea jt_jr = (JTextArea) panelLists.getComponent(0);
+			jt_jr.setText(str_journeys);
+			jt_jr.setForeground(Color.BLACK);
     	}
     }
+	
+	public JPanel getPanelWorkers() {
+		return panelWorkers;
+	}
+
+
+	public void setPanelWorkers(JPanel panelWorkers) {
+		this.panelWorkers = panelWorkers;
+	}
+
+
+	public JPanel getPanelLists() {
+		return panelLists;
+	}
+
+
+	public void setPanelLists(JPanel panelLists) {
+		this.panelLists = panelLists;
+	}
 }

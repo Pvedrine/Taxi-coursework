@@ -150,7 +150,12 @@ public class Journey {
 	 * overridden toString to print properties
 	 */
 	public String toString(){
-		return "Taxi: "+this.driver.toString()+" ; Destination: "+this.place.toString()+" ; Passengers: "+this.passengers+" ; Cost: "+this.cost;
+		if(this.driver==null) {
+			return "Taxi: Unknown \nDestination: "+this.place.toString()+"\nPassengers: "+this.passengers+"\nCost: "+this.cost+"\n";
+		}
+		else {
+			return "Taxi: "+this.driver.toString()+"\nDestination: "+this.place.toString()+"\nPassengers: "+this.passengers+"\nCost: "+this.cost+"\n";
+		}
 	}
 }
 
