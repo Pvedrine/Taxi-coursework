@@ -13,7 +13,7 @@ public class Program {
 		//We create the model 
 		//With for argument number of workers+1
 		//So arg = 4 => 3 workers
-		Model model = new Model(3);
+		Model model = new Model(12);
 		
 		//we create the view
         View   view  = new View(model);

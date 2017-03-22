@@ -4,6 +4,22 @@ Worker #2: Taxi: Reg number: ABH222 ; Name: Richard ; Destination: Address: Edin
 
 Worker #3: Taxi: Reg number: ABH111 ; Name: Didier ; Destination: Address: London ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
 
+Worker #4: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
+
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 12.0 ; Passengers: 3 ; Cost: 18.0
+
+Finishing
+
+Beginning
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier ; Destination: Address: London ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
+
+Worker #4: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard ; Destination: Address: Edinburgh ; Distance: 3.0 ; Passengers: 2 ; Cost: 3.75
+
+Worker #3: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 9.0 ; Passengers: 3 ; Cost: 13.5
+
 Finishing
 
 Beginning
@@ -12,19 +28,33 @@ Worker #2: Taxi: Reg number: ABH222 ; Name: Richard ; Destination: Address: Edin
 
 Worker #3: Taxi: Reg number: ABH111 ; Name: Didier ; Destination: Address: London ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
 
-Worker #2: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
+Worker #6: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
 
-Worker #3: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
-
-Finishing
+Worker #2: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 13.0 ; Passengers: 3 ; Cost: 19.5
 
 Finishing
 
 Beginning
 
+Worker #4: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
+
 Worker #3: Taxi: Reg number: ABH111 ; Name: Didier ; Destination: Address: London ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
 
 Worker #2: Taxi: Reg number: ABH222 ; Name: Richard ; Destination: Address: Edinburgh ; Distance: 3.0 ; Passengers: 2 ; Cost: 3.75
+
+Worker #7: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 11.0 ; Passengers: 1 ; Cost: 11.0
+
+Finishing
+
+Beginning
+
+Worker #5: Taxi: Reg number: ABH444 ; Name: Raoul ; Destination: Address: Inverness ; Distance: 2.0 ; Passengers: 3 ; Cost: 3.0
+
+Worker #3: Taxi: Reg number: ABH111 ; Name: Didier ; Destination: Address: London ; Distance: 7.0 ; Passengers: 4 ; Cost: 12.25
+
+Worker #2: Taxi: Reg number: ABH222 ; Name: Richard ; Destination: Address: Edinburgh ; Distance: 3.0 ; Passengers: 2 ; Cost: 3.75
+
+Worker #4: Taxi: Reg number: ABH333 ; Name: Robert ; Destination: Address: Glasgow ; Distance: 7.0 ; Passengers: 3 ; Cost: 10.5
 
 Finishing
 

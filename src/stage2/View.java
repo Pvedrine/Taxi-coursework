@@ -16,7 +16,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-
+/**
+ * The class implements Observer for the use of MVC
+ * The class extends JFrame to use its graphical elements
+ */
 public class View extends JFrame implements Observer{
 
 	/**
@@ -44,7 +47,10 @@ public class View extends JFrame implements Observer{
 	 */
     private JTextArea [] workers ;
 
-    
+    /**
+	 * constructor of the class
+	 * The graphical elements are created here
+	 */
     public View(Model model)
     {
         this.model = model;
@@ -72,7 +78,7 @@ public class View extends JFrame implements Observer{
    
     private JPanel createCustPanel() {
     	//cheating - know there are 6 customers
-    	JPanel custPanel = new JPanel(new GridLayout (1, numWorkers));
+    	JPanel custPanel = new JPanel(new GridLayout (0, numWorkers/2));
 		workers  = new JTextArea [numWorkers];
 		for (int i = 1; i < numWorkers; i++) {
 			workers [i]= new JTextArea(15,80);
@@ -93,24 +99,43 @@ public class View extends JFrame implements Observer{
     }
     
 
-	/////////////////////////////////////////////////////
-	//MVC pattern - allows listeners to be added
+    /**
+	  * Method to add an event listener to the button
+	  */
 	 public void addProcessBookingJourneyListener(ActionListener al) {
 			processButton.addActionListener(al);
 	    }
 
+	 /**
+	  * Method to disable the button to be pushed
+	  */
 	 public void disableProcessButton() {
 	    	processButton.setEnabled(false);
 	    }
 	 
+	 /**
+	  * Method to enable the button to be pushed
+	  */
 	 public void enableProcessButton(){
 		 	processButton.setEnabled(true);
 	 }
-	/////////////////////////////////////////////////////////
 	 
+	/**
+	 * Required method for Observable interface
+	 * Used to update graphical elements
+	 */
 	public synchronized void update(Observable o, Object args) {
+		//For all workers but worker 1 (because it doesn't process data, it adds some)
     	for (int i = 1; i < numWorkers; i++) {
-    		String report = workList.get(i).getProcessingJourney().toString();
+    		//We create a local variable
+    		String report = "";
+    		//If the worker is processing something
+    		//When everything has been processed we update the view for graphical effect and everything must be clear
+    		if(workList.get(i).getProcessingJourney() != null){
+    			//Get the data to reload
+    			report = workList.get(i).getProcessingJourney().toString();
+    		}
+    		//Set the data to display into the GUI
 			this.workers[i].setText( report);	
 			this.workers[i].setForeground(Color.BLACK);
 

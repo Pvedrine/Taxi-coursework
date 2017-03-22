@@ -107,5 +107,7 @@ public class Worker implements Runnable {
 			//Notify the view the model has changed
 			model.modelChanged();
 		}
+		this.journeyBeingProcessed = null;
+		model.modelChanged();
 	}
 }

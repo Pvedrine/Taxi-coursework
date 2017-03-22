@@ -9,6 +9,8 @@ import log.Log;
 import taxiClasses.*;
 
 //This class contains all the informations about the model and how to use it
+//The class implements runnable so we can use it in a thread
+//The class extends Observable so we can use MVC
 public class Model extends Observable implements  Runnable {
 	
 	/**
