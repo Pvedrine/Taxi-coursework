@@ -170,5 +170,14 @@ public class Model extends Observable implements  Runnable {
     	Log.getInstance().record("Finishing\n");
 		
 	}
+	
+	/**
+	 * Method to notify observers that state has changed
+	 */
+	public synchronized void modelChanged(){
+		setChanged();
+		notifyObservers();
+    	clearChanged();
+	}
 
 }

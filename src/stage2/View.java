@@ -19,10 +19,29 @@ import javax.swing.JTextArea;
 
 public class View extends JFrame implements Observer{
 
+	/**
+	 * In this property is stored the button to process the data
+	 */
 	JButton processButton;
+	
+	/**
+	 * In this property is stored a reference of the model of the MVP
+	 */
 	Model model;
+	
+	/**
+	 * In this property is stored the list of all the workers
+	 */
 	ArrayList<Worker> workList;
+	
+	/**
+	 * In this property is stored the number of workers
+	 */
 	int numWorkers;
+	
+	/**
+	 * In this property is stored the list of graphical elements for the workers
+	 */
     private JTextArea [] workers ;
 
     
@@ -55,7 +74,7 @@ public class View extends JFrame implements Observer{
     	//cheating - know there are 6 customers
     	JPanel custPanel = new JPanel(new GridLayout (1, numWorkers));
 		workers  = new JTextArea [numWorkers];
-		for (int i = 0; i < numWorkers; i++) {
+		for (int i = 1; i < numWorkers; i++) {
 			workers [i]= new JTextArea(15,80);
 			//monospaced allows nice tabular layout
 			workers[i].setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
@@ -90,7 +109,7 @@ public class View extends JFrame implements Observer{
 	/////////////////////////////////////////////////////////
 	 
 	public synchronized void update(Observable o, Object args) {
-    	for (int i = 0; i < numWorkers; i++) {
+    	for (int i = 1; i < numWorkers; i++) {
     		String report = workList.get(i).getProcessingJourney().toString();
 			this.workers[i].setText( report);	
 			this.workers[i].setForeground(Color.BLACK);

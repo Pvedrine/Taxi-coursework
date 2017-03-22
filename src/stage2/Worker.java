@@ -93,9 +93,10 @@ public class Worker implements Runnable {
 				model.addJourneyProcessed(this.journeyBeingProcessed);
 				//Record this in the log
 				Log.getInstance().record("Worker #" + this.workerID + ": " + this.journeyBeingProcessed.toString() + "\n");
+				
 				try {
 					//Sleep for some time. Not too much otherwise worker 1 will work too much
-					Thread.sleep(200);
+					Thread.sleep(2000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -103,6 +104,8 @@ public class Worker implements Runnable {
 				//Add this journey to the local list of processed journeys
 				addProcessedJourney(this.journeyBeingProcessed);
 			}
+			//Notify the view the model has changed
+			model.modelChanged();
 		}
 	}
 }
