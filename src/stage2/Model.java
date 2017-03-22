@@ -41,6 +41,7 @@ public class Model extends Observable implements  Runnable {
 	/**
 	 * In this property is stored a reference of the view from MVC
 	 */
+	@SuppressWarnings("unused")
 	private View view;
 	
 	/**

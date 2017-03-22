@@ -1,7 +1,5 @@
 package JUnitTests;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import taxiClasses.*;
 public class TestJourney {
@@ -12,6 +10,7 @@ public class TestJourney {
 	public void testBigTaxi() {
 		Taxi taxi1 = new Taxi("Freddie Mercury", "HW01 AAA");
 		Destination dest = new Destination ("Glasgow", 42);
+		@SuppressWarnings("unused")
 		Journey journey = new Journey(taxi1, dest, 5);
 		
 	}
@@ -20,6 +19,7 @@ public class TestJourney {
 	@Test (expected = IllegalArgumentException.class)
 	public void testFakeTaxi(){
 		Destination dest = new Destination ("Glasgow", 42);
+		@SuppressWarnings("unused")
 		Journey journey = new Journey(new Taxi("Matt Bellamy", "HW12 ABC"), dest, 4 );
 		
 	}

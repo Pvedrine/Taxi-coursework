@@ -16,16 +16,19 @@ public class TestTaxi {
 
 	@Test (expected = IllegalArgumentException.class)
 	public void testRN(){
+		@SuppressWarnings("unused")
 		Taxi taxi = new Taxi("Daniel Balavoine", "HE L1 C0pter");
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void rnNoSpace(){
+		@SuppressWarnings("unused")
 		Taxi taxi = new Taxi("Johnny Hallyday", "HW41 FEU");
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testLengthRN(){
+		@SuppressWarnings("unused")
 		Taxi taxi = new Taxi("Joe Dassin", "HW55 LETEINDIEN");
 	}
 }

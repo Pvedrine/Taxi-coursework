@@ -23,6 +23,11 @@ import javax.swing.JTextArea;
 public class View extends JFrame implements Observer{
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * In this property is stored the button to process the data
 	 */
 	JButton processButton;
