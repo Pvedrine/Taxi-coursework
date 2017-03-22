@@ -44,7 +44,7 @@ public class Log {
 			   writer = new BufferedWriter(new OutputStreamWriter(
 					   new FileOutputStream(Log.filename, true), "utf-8"));
 			   //We add the message to the end of the file
-			   writer.write(string + "\n");
+			   writer.write(string + "\r\n");
 
 			   writer.close();
 			} 

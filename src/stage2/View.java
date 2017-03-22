@@ -3,7 +3,6 @@ package stage2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -22,6 +21,11 @@ import taxiClasses.Journey;
 
 
 public class View extends JFrame implements Observer{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * In this property is stored the button to process the data

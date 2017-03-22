@@ -72,10 +72,12 @@ public class Worker implements Runnable {
 			if(this.workerID == 1){
 				//Insert a new journey to the list of journey 
 				this.model.addRandomJourneyToProcess(this);
+				//Notify the view the model has changed
+				model.modelChanged();
 				try {
 					//Sleep for some time
 					//Enough so the other threads can work and we don't have an infinite list of journeys
-					Thread.sleep(400);
+					Thread.sleep(4000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -93,7 +95,10 @@ public class Worker implements Runnable {
 				model.addJourneyProcessed(this.journeyBeingProcessed);
 				//Record this in the log
 				Log.getInstance().record("Worker #" + this.workerID + ": " + this.journeyBeingProcessed.toString() + "\n");
-				
+				//Add this journey to the local list of processed journeys
+				addProcessedJourney(this.journeyBeingProcessed);
+				//Notify the view the model has changed
+				model.modelChanged();
 				try {
 					//Sleep for some time. Not too much otherwise worker 1 will work too much
 					Thread.sleep(2000);
@@ -101,11 +106,7 @@ public class Worker implements Runnable {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//Add this journey to the local list of processed journeys
-				addProcessedJourney(this.journeyBeingProcessed);
 			}
-			//Notify the view the model has changed
-			model.modelChanged();
 		}
 		this.journeyBeingProcessed = null;
 		model.modelChanged();

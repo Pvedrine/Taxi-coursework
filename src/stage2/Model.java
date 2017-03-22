@@ -61,6 +61,7 @@ public class Model extends Observable implements  Runnable {
 		this.taxies.add(new Taxi("ABH111", "Didier"));
 		this.taxies.add(new Taxi("ABH333", "Robert"));
 		this.taxies.add(new Taxi("ABH444", "Raoul"));
+		this.taxies.add(new Taxi("ABH555", "Romuald"));
 		this.journeysToAllocate.add(new Journey(null, new Destination("Edinburgh", 3), 2));
 		this.journeysToAllocate.add(new Journey(null, new Destination("London", 7), 4));
 		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 3));
