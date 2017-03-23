@@ -86,7 +86,10 @@ public class Model extends Observable implements  Runnable {
 	 * It is synchronized so one thread only can access it at a time
 	 */
 	public synchronized Taxi getOneTaxi(){
-		return this.taxies.removeFirst();
+		if(!this.taxies.isEmpty())
+			return this.taxies.removeFirst();
+		else
+			return null;
 	}
 	
 	/**
@@ -126,7 +129,10 @@ public class Model extends Observable implements  Runnable {
 	 * It is synchronized so one thread only can access it at a time
 	 */
 	public synchronized Journey getFirstJourneyToAllocate(){
-		return this.journeysToAllocate.removeFirst();
+		if(!this.journeysToAllocate.isEmpty())
+			return this.journeysToAllocate.removeFirst();
+		else 
+			return null;
 	}
 	
 	/**
