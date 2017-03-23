@@ -66,7 +66,7 @@ public class Worker implements Runnable {
 		Taxi taxiBeingBooked;
 		
 		//while there are still a taxi and a journey left
-		while(model.isFinished()){
+		while(!model.isFinished()){
 			
 			//if worker 1
 			if(this.workerID == 1){

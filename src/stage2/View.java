@@ -97,7 +97,7 @@ public class View extends JFrame implements Observer{
     	//We want as many columns as we have workers
     	JPanel custPanel = new JPanel(new GridLayout (1, numWorkers));
 		workers  = new JTextArea [numWorkers];
-		for (int i = 0; i < numWorkers; i++) {
+		for (int i = 0; i < numWorkers-1; i++) {
 			workers [i]= new JTextArea(20,40);
 			//monospaced allows nice tabular layout
 			//workers[i].setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
@@ -144,9 +144,9 @@ public class View extends JFrame implements Observer{
 	 
 	public synchronized void update(Observable o, Object args) {
     	for (int i = 1; i < numWorkers; i++) {
-    		String report = "";
+    		String report = "WINDOW " + i + ":\n";
     		if(workList.get(i).getProcessingJourney()!= null)
-    			report = workList.get(i).getProcessingJourney().toString();
+    			report += workList.get(i).getProcessingJourney().toString();
     		LinkedList<Taxi> taxies = model.getAllTaxies();
     		LinkedList<Journey> journeys = model.getAllJourneysToAllocate();
     		String str_taxies = "";
@@ -157,7 +157,7 @@ public class View extends JFrame implements Observer{
     		for(int j=0;j<journeys.size();j++) {
     			str_journeys += journeys.get(j).toString() + "\n";
     		}
-    		JTextArea jt_wk = (JTextArea) panelWorkers.getComponent(i);
+    		JTextArea jt_wk = (JTextArea) panelWorkers.getComponent(i-1);
 			jt_wk.setText(report);	
 			jt_wk.setForeground(Color.BLACK);
 			

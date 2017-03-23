@@ -70,11 +70,10 @@ public class Model extends Observable implements  Runnable {
 	
 	/**
 	 * Method to get the state of the lists of journeys and taxies
-	 * It is synchronized so one thread only can access it at a time
 	 * return true if at least one of the lists is empty
 	 */
 	public boolean isFinished() {
-		return !(this.journeysToAllocate.isEmpty() || this.taxies.isEmpty());
+		return (this.journeysToAllocate.isEmpty() || this.taxies.isEmpty());
 	}
 
 	/**
