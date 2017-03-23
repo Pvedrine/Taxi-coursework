@@ -62,9 +62,14 @@ public class Model extends Observable implements  Runnable {
 		this.taxies.add(new Taxi("ABH333", "Robert"));
 		this.taxies.add(new Taxi("ABH444", "Raoul"));
 		this.taxies.add(new Taxi("ABH555", "Romuald"));
-		this.journeysToAllocate.add(new Journey(null, new Destination("Edinburgh", 3), 2));
-		this.journeysToAllocate.add(new Journey(null, new Destination("London", 7), 4));
-		this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 3));
+		try {
+			this.journeysToAllocate.add(new Journey(null, new Destination("Edinburgh", 3), 2));
+			this.journeysToAllocate.add(new Journey(null, new Destination("London", 7), 4));
+			this.journeysToAllocate.add(new Journey(null, new Destination("Glasgow", 7), 3));
+		} catch (WrongNumberPassengersException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		///////////////////////////////////////////////////////////////////////////////////////////
 	}
 	
@@ -97,9 +102,16 @@ public class Model extends Observable implements  Runnable {
 	 */
 	public void addRandomJourneyToProcess(Worker worker){
 		Random rand = new Random(); 
-		Journey j1 = new Journey(null, new Destination("Inverness", rand.nextInt(15 - 0 + 1) + 0), rand.nextInt(4 - 1 + 1) + 1);
-		Log.getInstance().record("Worker #" + worker.getWorkerId() + ": " + j1.toString() + "\n");
-		addJourneyToProcess(j1);
+		Journey j1;
+		try {
+			j1 = new Journey(null, new Destination("Inverness", rand.nextInt(15 - 0 + 1) + 0), rand.nextInt(4 - 1 + 1) + 1);
+			Log.getInstance().record("Worker #" + worker.getWorkerId() + ": " + j1.toString() + "\n");
+			addJourneyToProcess(j1);
+		} catch (WrongNumberPassengersException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	/**

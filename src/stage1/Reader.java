@@ -219,8 +219,9 @@ public class Reader {
 	 * Method to load all the journeys of the year
 	 * @throws NoMatchingDestination 
 	 * @throws NoMatchingTaxi 
+	 * @throws WrongNumberPassengersException 
 	 */
-	public void load_journeys() throws NoMatchingDestination, NoMatchingTaxi {
+	public void load_journeys() throws NoMatchingDestination, NoMatchingTaxi, WrongNumberPassengersException {
 		String data [] = new String[3];
 		//We create a buffer
 		BufferedReader buff = null;
@@ -310,8 +311,9 @@ public class Reader {
 	 * Method to load all the data 
 	 * @throws NoMatchingTaxi 
 	 * @throws NoMatchingDestination 
+	 * @throws WrongNumberPassengersException 
 	 */
-	public void load() throws NoMatchingDestination, NoMatchingTaxi {
+	public void load() throws NoMatchingDestination, NoMatchingTaxi, WrongNumberPassengersException {
 		load_taxies();
 		load_destinations();
 		load_journeys();

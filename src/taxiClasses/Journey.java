@@ -38,11 +38,16 @@ public class Journey {
 	
 	/**
 	 * All parameters constructor for the class
+	 * @throws WrongNumberPassengersException 
 	 */
-	public Journey(Taxi driver, Destination place, int passengers) {
+	public Journey(Taxi driver, Destination place, int passengers) throws WrongNumberPassengersException {
 		this.driver = driver;
 		this.place = place;
-		this.passengers = passengers;
+		if(passengers > 4){
+			throw new WrongNumberPassengersException(passengers);
+		}
+		else
+			this.passengers = passengers;
 		//We try to calculate the price
 		try {
 			calculate();
